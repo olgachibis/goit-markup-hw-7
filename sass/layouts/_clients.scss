@@ -1,0 +1,52 @@
+/* Our clients */
+.our-clients {
+    display: flex;
+}
+
+
+.our-clients .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-list .icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-list:hover .icon,
+.clients-list:focus .icon {
+    fill: $accent-color;
+}
+
+.our-clients .clients-link {
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-clients .clients-link:hover,
+.our-clients .clients-link:focus {
+    border: 1px solid $accent-color;
+
+}
+
+.clients-list {
+    flex-basis: calc((100% - 150px) / 6);
+    height: 92px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid $social-color;
+    border-radius: 4px;
+
+}
+
+.clients {
+    padding-top: 94px;
+
+}

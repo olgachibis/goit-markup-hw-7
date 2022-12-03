@@ -1,0 +1,590 @@
+/* Header */
+.header {
+    background-color: $secondary-white-color;
+    border-bottom: 1px solid #ECECEC;
+
+}
+
+.main-header {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav .link {
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: $accent-color;
+
+}
+
+.site-nav .link::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $accent-color;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav .link.current::after {
+    opacity: 1;
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.contacts .item+.item {
+    margin-left: 50px;
+}
+
+
+.link.current {
+    color: $accent-color;
+}
+
+
+
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+    color: $accent-color;
+
+}
+
+.logo {
+    display: block;
+    margin-right: 93px;
+
+    color: primary-text-color;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+
+}
+
+.logo-color {
+    color: $accent-color;
+}
+
+.logo-color-name {
+    color: $primary-white-color;
+}
+
+.phone {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.phone-link:hover .phone {
+    fill: $accent-color;
+}
+/* Portfolio */
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects .item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.title-project {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.type-project {
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.03em;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-list .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+}
+
+.project-list .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.project-list .title-project {
+    margin-bottom: 4px;
+}
+
+.name-project {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.project-item {
+    position: relative;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.project-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+
+
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-box:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 314px;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28/18);
+    letter-spacing: 0.03em;
+
+    color: $secondary-white-color;
+}
+
+/* Button */
+.button {
+    color: $primary-text-color;
+    background-color: $secondary-white-color;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.button.hero-button {
+    padding: 10px 32px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    align-items: center;
+    letter-spacing: 0.06em;
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.hero-button:focus,
+.button.hero-button:hover {
+    background-color: $accent-color;
+}
+
+.button.projects-button {
+    padding: 6px 22px;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+    font-weight: 500;
+    line-height: calc(26/16);
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.projects-button:focus,
+.button.projects-button:hover {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.feedback {
+    padding: 10px 52px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: auto;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback:focus,
+.feedback:hover {
+    background-color: $accent-color;
+
+
+}
+
+.button.subscribe-button {
+    padding: 10px 52px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    align-items: center;
+    letter-spacing: 0.06em;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+
+.button.subscribe-button:focus,
+.button.subscribe-button:hover {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+
+
+
+/* Portfolio */
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.projects .item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.title-project {
+    color: $primary-text-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.type-project {
+    color: $secondary-text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(30/16);
+    letter-spacing: 0.03em;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-list .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+}
+
+.project-list .item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.project-list .title-project {
+    margin-bottom: 4px;
+}
+
+.name-project {
+    padding: 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.project-item {
+    position: relative;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.project-item:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+
+
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-box:hover .overlay {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 314px;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28/18);
+    letter-spacing: 0.03em;
+
+    color: $secondary-white-color;
+}
+
+
+/* Button */
+.button {
+    color: $primary-text-color;
+    background-color: $secondary-white-color;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.button.hero-button {
+    padding: 10px 32px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    align-items: center;
+    letter-spacing: 0.06em;
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.hero-button:focus,
+.button.hero-button:hover {
+    background-color: $accent-color;
+}
+
+.button.projects-button {
+    padding: 6px 22px;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+    font-weight: 500;
+    line-height: calc(26/16);
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.projects-button:focus,
+.button.projects-button:hover {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.feedback {
+    padding: 10px 52px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    letter-spacing: 0.06em;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: auto;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback:focus,
+.feedback:hover {
+    background-color: $accent-color;
+
+
+}
+
+.button.subscribe-button {
+    padding: 10px 52px;
+
+    font-weight: 700;
+    line-height: calc(30/16);
+    align-items: center;
+    letter-spacing: 0.06em;
+    /* display: flex; */
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+
+.button.subscribe-button:focus,
+.button.subscribe-button:hover {
+    background-color: $accent-color;
+    color: $primary-white-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
