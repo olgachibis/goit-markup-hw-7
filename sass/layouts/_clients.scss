@@ -1,15 +1,18 @@
 /* Our clients */
 .our-clients {
     display: flex;
-}
+    .clients-link {
+            transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover,
+            &:focus {
+                    border: 1px solid $accent-color;
+                            }
+        }
 
+}
 
 .our-clients .item:not(:last-child) {
     margin-right: 30px;
-}
-
-.clients-list .icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list:hover .icon,
@@ -17,21 +20,13 @@
     fill: $accent-color;
 }
 
-.our-clients .clients-link {
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.our-clients .clients-link:hover,
-.our-clients .clients-link:focus {
-    border: 1px solid $accent-color;
-
-}
-
 .clients-list {
     flex-basis: calc((100% - 150px) / 6);
     height: 92px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+.icon {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .clients-link {
