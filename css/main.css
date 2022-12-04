@@ -105,8 +105,8 @@ img {
 
 .button.projects-button {
   padding: 6px 22px;
-  color: var(--primary-text-color);
-  background-color: var(--primary-white-color);
+  color: #212121;
+  background-color: #F5F4FA;
   font-weight: 500;
   line-height: 1.625;
   letter-spacing: 0.03em;
